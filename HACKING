@@ -1,0 +1,11 @@
+** Plan **
+
+The plan is to write a twitch clone with the same kind of UI and UX as the correct twitch and implement all the
+functionality using React.
+
+
+Types of screen:
+
+- Logged out view
+- Logged in view
+

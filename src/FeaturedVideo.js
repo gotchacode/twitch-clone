@@ -12,7 +12,6 @@ export default class FeaturedVideo extends  Component {
 
   render() {
     return(
-      <div className="container videoContainer">
         <div className="row">
           <div className="col-md-8">
             <video className="featuredVideo" src={this.state.videoURL} autoPlay poster="" controls>
@@ -22,10 +21,9 @@ export default class FeaturedVideo extends  Component {
             </video>
           </div>
           <div className="col-md-4">
-            <h1>some custom text</h1>
+            <h1>Featured Video</h1>
           </div>
         </div>
-      </div>
     )
   }
 }

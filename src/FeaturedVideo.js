@@ -1,24 +1,15 @@
-import React , {Component, Fragment} from 'react';
+import React , {Component} from 'react';
 import video from './small.mp4';
 import './FeaturedVideo.css';
+import YouTube from './YouTube';
+
 
 export default class FeaturedVideo extends  Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      videoURL: video,
-    };
-  }
-
   render() {
     return(
         <div className="row">
           <div className="col-md-8">
-            <video className="featuredVideo" src={this.state.videoURL} autoPlay poster="" controls>
-              Sorry, your browser doesn't support embedded videos,
-              but don't worry, you can <a href="videofile.webm">download it</a>
-              and watch it with your favorite video player!
-            </video>
+            <YouTube video={this.props.videoID} height="315" width="560" />
           </div>
           <div className="col-md-4">
             <h1>Featured Video</h1>

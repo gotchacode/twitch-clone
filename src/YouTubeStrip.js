@@ -1,24 +1,14 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
 import YouTube from './YouTube';
 
 export default class YouTubeStrip extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
-    let videoContainer = null;
-    if (this.props.videos !== null) {
-      videoContainer = [];
-      this.props.videos.forEach( (video, key) => {
-        videoContainer.push(<YouTube video={video} key={key} />)
-      });
-
-    }
     return (
-      <div class="row">
-        {videoContainer}
+      <div className="row">
+        {this.props.videos.map((video, key) => (
+          <YouTube video={video} key={key} />
+        ))}
       </div>
-    )
+    );
   }
 }

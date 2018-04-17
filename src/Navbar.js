@@ -1,11 +1,7 @@
 import React, {Component} from "react";
 
 export default class NavBar extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
+   render() {
     return (
       <header className="twitch-navbar navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar">
         <a className="navbar-brand mr-0 mr-md-2" href="/" aria-label="Bootstrap">
@@ -15,25 +11,23 @@ export default class NavBar extends Component {
         <div className="navbar-nav-scroll">
           <ul className="navbar-nav bd-navbar-nav flex-row">
             <li className="nav-item">
-              <a className="nav-link " href="/"
-                 onClick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">Browse</a>
+              <a className="nav-link " href="/">Browse</a>
             </li>
             <li className="nav-item">
-              <a className="nav-link active" href="/docs/4.0/getting-started/introduction/"
-                 onClick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">Get Desktop</a>
+              <a className="nav-link active" href="/docs/4.0/getting-started/introduction/">Get Desktop</a>
             </li>
             <li className="nav-item">
               <a className="nav-link " href="/docs/4.0/examples/"
-                 onClick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">Go Turbo</a>
+                 >Go Turbo</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="https://themes.getbootstrap.com"
-                 onClick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');" target="_blank"
-                 rel="noopener" rel="noopener noreferrer">Store</a>
+                target="_blank"
+                rel="noopener noreferrer">Store</a>
             </li>
             <li className="nav-item">
               <a className="nav-link" href="https://jobs.getbootstrap.com"
-                 onClick="ga('send', 'event', 'Navbar', 'Community links', 'Jobs');" target="_blank"
+                 target="_blank"
                  rel="noopener noreferrer">...</a>
             </li>
           </ul>
@@ -77,7 +71,7 @@ export default class NavBar extends Component {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link p-2" href="https://bootstrap-slack.herokuapp.com" target="_blank" rel="noopener"
+            <a className="nav-link p-2" href="https://bootstrap-slack.herokuapp.com" target="_blank"
                aria-label="Slack" rel="noopener noreferrer">
               <svg className="navbar-nav-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                    focusable="false"><title>Slack</title>

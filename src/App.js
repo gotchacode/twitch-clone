@@ -11,7 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
       videos: [],
-      FeaturedVideoID: null,
+      FeaturedVideo: null,
     };
 
     this.videoSearch('eminem')
@@ -22,11 +22,12 @@ class App extends Component {
       let videoIDs = [];
       video = video.slice(0, 4);
       video.forEach((video, key) => {
-        videoIDs.push(video.id.videoId)
+        videoIDs.push(video)
       });
       this.setState({
         videos: videoIDs,
-        FeaturedVideoID: video[0].id.videoId
+        FeaturedVideo: videoIDs[0],
+        // FeaturedVideoID: video[0].id.videoId
       });
     });
   }
@@ -37,7 +38,7 @@ class App extends Component {
       <Fragment>
         <NavBar/>
         <div className="container videoContainer">
-          <FeaturedVideo videoID={this.state.FeaturedVideoID}/>
+          { this.state.FeaturedVideo && <FeaturedVideo video={this.state.FeaturedVideo}/> }
           <YouTubeStrip videos={this.state.videos} />
         </div>
       </Fragment>

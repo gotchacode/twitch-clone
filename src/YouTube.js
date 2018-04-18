@@ -10,10 +10,10 @@ export default class YouTube extends Component {
       height = 159;
       width = 280;
     }
-    const url = `https://www.youtube.com/embed/${video}`;
+    const url = `https://www.youtube.com/embed/${video.id.videoId}`;
     return(
       <div className="youtube col-md-3">
-        <iframe width={width} height={height} src={url} title={video}
+        <iframe width={width} height={height} src={url} title={video.snippet.title}
       frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </div>
     )
